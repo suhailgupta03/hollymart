@@ -38,7 +38,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >Hollymart</a>
             </li>
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
@@ -91,7 +91,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
+                    <h2 class="first-view-animate">Our Services</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -101,7 +101,7 @@
 		                        <i class="fa fa-check fa-stack-1x text-primary"></i>
                             	</span>
                                 <h4>
-                                    <strong class="first-view-animate">Genuine Products</strong>
+                                    <strong>Genuine Products</strong>
                                 </h4>
                                 <p>Our products are 100% genuine. No strings attached!</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
@@ -114,7 +114,7 @@
                                 <i class="fa fa-send fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong class="first-view-animate">Ready to Ship</strong>
+                                    <strong>Ready to Ship</strong>
                                 </h4>
                                 <p>Give us a call and we deliver at your doorstep.</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
@@ -127,7 +127,7 @@
                                 <i class="fa fa-shopping-cart fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong class="first-view-animate">Trending</strong>
+                                    <strong>Trending</strong>
                                 </h4>
                                 <p>All the trending items to keep you afresh.</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
@@ -140,7 +140,7 @@
                                 <i class="fa fa-heart fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong class="first-view-animate">Service with Love</strong>
+                                    <strong>Service with Love</strong>
                                 </h4>
                                 <p>Feel the difference. We just love our customers!</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
@@ -159,7 +159,7 @@
     <!-- Callout -->
     <aside class="callout">
         <div class="text-vertical-center">
-            <h1>Just everything you need in your house</h1>
+            <h1 class="first-view-animate">Just everything you need in your house</h1>
         </div>
     </aside>
 
@@ -168,7 +168,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Your Store</h2>
+                    <h2 class="first-view-animate">Your Store</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
@@ -281,59 +281,11 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/site.js"></script>
     <!-- Google analytics async download -->
     <script src="js/google-analytics.js" async></script>
     <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-        
-        $(window).on('scroll',function(){
-        	isScrolledIntoView();
-        });
-
-    });
-    
-    var isScrolledIntoView = function() {
-	$('.first-view-animate').each(function() {
-		if(!$(this).hasClass('animated pulse')) {
-			var docViewTop = $(window).scrollTop();
-			var docViewBottom = docViewTop + $(window).height();
-			var elementTop = $(this).offset().top;
-			var elementBottom = elementTop + $(this).height();
-			if( (elementBottom <= docViewBottom) && (elementTop >= docViewTop) ) {
-				$(this).addClass('animated pulse');
-			}
-		}
-	});
-    };
-    </script>
-
 </body>
 
 </html>
